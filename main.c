@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
     
     // ---- Sezione 2
     // Inizializzazione del vettore delle frequenze
-    for(i=0; i<4; i++)
+    for(i=0; i<VALORE_MASSIMO+1; i++)
         frequenze[i] = 0;
     
     // Inserimento dei valori
@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
     }
     
     // Stampa delle frequenze
-    for(i=0; i<4; i++) {
+    for(i=0; i<VALORE_MASSIMO+1; i++) {
         printf("Hai inserito il valore %d per %d volte\n", i, frequenze[i]);
     }
     
