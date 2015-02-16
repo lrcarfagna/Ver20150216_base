@@ -51,8 +51,30 @@ int main(int argc, char** argv) {
  * NOTA: considera 0^0=1
  */
 float potenza(int base, int esponente) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+    
+    int i;
+    int numeratore=1;
+    int denominatore=base;
+    
+    float risultato=(float)base;
+    
+    if(esponente==0) risultato=1;
+    else{
+        if(esponente>0)
+            for(i=1;i<esponente;i++) 
+               risultato=risultato*base;
+        else{
+            if(esponente<0){
+                esponente*=-1;
+                for(i=1;i<esponente;i++) denominatore=denominatore*base;
+                risultato=(float)numeratore/denominatore;
+            }
+    
+    
+        }
+    
+    return risultato;
+    }
 }
 
 /*
@@ -65,6 +87,9 @@ float potenza(int base, int esponente) {
  * dopo la chiamata.
  */
 void aggiornaFrequenza(int frequenze[], int valore) {
-    // TODO Implementa il corpo della funzione
+    
+    int i;
+    for(i=0;i<N_VALORI_DA_INSERIRE;i++) if(i==valore) frequenze[i]++;
     return;
+    
 }
