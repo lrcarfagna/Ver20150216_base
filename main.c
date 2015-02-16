@@ -61,13 +61,15 @@ float potenza(int base, int esponente) {
         r *= base;
     }
     if(esponenteNegativo) {
-        if(r) {
-            r = 1/r;
-        }
-        else {
-            fprintf(stderr, "Divisione per 0\n");
-            exit(-1);
-        }
+        r = 1/r;
+        // Più completo
+//        if(r) {
+//            r = 1/r;
+//        }
+//        else {
+//            fprintf(stderr, "Divisione per 0\n");
+//            exit(-1);
+//        }
     }
     return r;
 }
